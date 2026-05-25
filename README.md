@@ -74,6 +74,8 @@ phone-relay-1
    ↓
 phone-relay-2
    ↓
+phone-relay-3
+   ↓
 phone-bridge
 ````
 
