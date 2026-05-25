@@ -88,10 +88,19 @@ phone-bridge
 
 ## Security Features
 
-* RSA-OAEP + AES-256-GCM Hybrid Encryption
-* Tamper Detection using AES-GCM
-* Replay Protection using nonce & timestamp validation
-* Idempotent Transaction Settlement
+### Hybrid Encryption
+
+- RSA-OAEP is used to securely exchange encryption keys
+- AES-256-GCM encrypts payment payloads and provides tamper detection
+
+### Replay Protection
+
+- nonce generation
+- timestamp validation
+
+### Idempotency
+
+- duplicate packet settlement prevention
 
 ---
 
