@@ -1,5 +1,5 @@
 # OfflineUPI 📶💳
-**Mesh-Based Secure Payment Settlement System**
+**Mesh-Based Secure Transaction Processing System**
 
 ---
 
