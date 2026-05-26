@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-OfflineUPI is a distributed payment simulation system built using Spring Boot that demonstrates secure offline payment propagation through mesh-based relay devices using gossip protocol and deferred settlement architecture.
+OfflineUPI is a distributed transaction processing system built using Spring Boot that demonstrates secure offline payment propagation through mesh-based communication, gossip protocol routing, and deferred settlement architecture.
 
 ---
 
@@ -24,7 +24,7 @@ OfflineUPI is a distributed payment simulation system built using Spring Boot th
 
 ## Architecture
 
-OfflineUPI uses a mesh-routing architecture where encrypted payment packets propagate across nearby relay devices until a bridge node regains internet connectivity and uploads the packet to backend for secure transaction settlement.
+OfflineUPI uses a mesh-routing architecture where encrypted payment packets propagate across nearby relay nodes until a bridge node regains internet connectivity and uploads the packet to the backend for secure transaction settlement.
 
 ---
 
