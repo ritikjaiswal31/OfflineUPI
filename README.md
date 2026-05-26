@@ -1,5 +1,5 @@
 # OfflineUPI 📶💳
-**Offline Mesh-Based Secure Payment Settlement System**
+**Mesh-Based Secure Payment Settlement System**
 
 ---
 
@@ -145,45 +145,6 @@ Shows:
 <img width="1950" height="1313" alt="Initial Dashboard" src="https://github.com/user-attachments/assets/3dc36c24-a374-464a-a5c7-c2d98319a911" />
 
 ---
-
-### Payment Packet Injection
-
-
-
-![Payment Packet Injection](screenshots/dashboard-packet-injected.png)
-
----
-
-### Gossip Propagation
-
-Shows encrypted packet propagation across relay devices using gossip protocol.
-
-![Gossip Propagation](screenshots/dashboard-gossip-propagation.png)
-
----
-
-### Bridge Upload & Settlement
-
-Bridge node uploads packet after regaining internet connectivity and backend performs secure settlement.
-
-![Bridge Upload & Settlement](screenshots/dashboard-settlement-success.png)
-
----
-
-### Successful Transaction Settlement
-
-Shows:
-- updated balances
-- successful transaction history
-- settlement confirmation
-
-![Settlement Success](screenshots/dashboard-settlement-success.png)
-
----
-
-### Postman API Testing
-
-# API Testing Screenshots
 
 ### Accounts
 
