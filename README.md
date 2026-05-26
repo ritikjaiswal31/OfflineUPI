@@ -24,7 +24,7 @@ OfflineUPI is a distributed transaction processing system built using Spring Boo
 
 ## Architecture
 
-OfflineUPI uses a mesh-routing architecture where encrypted payment packets propagate across nearby relay nodes until a bridge node regains internet connectivity and uploads the packet to the backend for secure transaction settlement.
+OfflineUPI uses a distributed mesh-routing architecture where encrypted payment packets propagate across nearby relay nodes through gossip-based communication until a bridge node restores internet connectivity and forwards the packet to the backend for secure transaction settlement.
 
 ---
 
@@ -38,7 +38,7 @@ OfflineUPI uses a mesh-routing architecture where encrypted payment packets prop
 | Security | RSA-OAEP, AES-256-GCM |
 | Build Tool | Maven |
 | API Testing | Postman |
-| Concepts | Distributed Systems, Gossip Protocol, Deferred Settlement |
+| Concepts | Distributed Systems, Gossip Protocol, Deferred Settlement, Idempotency |
 
 ---
 
@@ -46,22 +46,23 @@ OfflineUPI uses a mesh-routing architecture where encrypted payment packets prop
 
 | Component | Description |
 |-----------|-------------|
-| Mesh Simulator | Simulates mesh propagation |
-| Relay Nodes | Forward encrypted packets |
-| Bridge Node | Uploads packets when internet returns |
-| Settlement Service | Handles atomic settlement |
-| Hybrid Crypto Service | Encryption & decryption |
-| Idempotency Service | Prevents duplicate settlement |
-| Dashboard UI | Visualizes packet propagation |
+| Mesh Simulator | Simulates offline mesh-based packet propagation |
+| Relay Nodes | Forward encrypted payment packets across the mesh network |
+| Bridge Node | Uploads packets to backend after internet restoration |
+| Settlement Service | Performs atomic debit-credit transaction settlement |
+| Hybrid Crypto Service | Handles RSA + AES-GCM encryption and decryption |
+| Idempotency Service | Prevents duplicate transaction settlement |
+| Dashboard UI | Visualizes mesh propagation and settlement flow |
 
 ---
 
 ## Application Flow
 
-1. Sender creates encrypted payment packet
-2. Packet propagates across relay devices
-3. Bridge node regains internet
-4. Backend validates & settles transaction
+1. Sender creates an encrypted payment packet
+2. Packet propagates across nearby relay nodes using gossip-based mesh routing
+3. Bridge node regains internet connectivity
+4. Bridge uploads packet to backend
+5. Backend validates, decrypts and settles transaction
 
 ---
 
