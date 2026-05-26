@@ -1,4 +1,4 @@
-# OfflineUPI 📶💳
+# OfflineUPI 📶
 **Mesh-Based Secure Transaction Processing System**
 
 ---
@@ -102,6 +102,42 @@ phone-bridge
 ### Idempotency
 
 - duplicate packet settlement prevention
+
+## Engineering Challenges & Solutions
+
+### 1. Untrusted Devices
+
+OfflineUPI uses hybrid encryption with RSA-OAEP and AES-256-GCM to securely propagate encrypted payment packets across untrusted relay devices.
+
+- RSA-OAEP securely encrypts the AES session key
+- AES-256-GCM encrypts payment payloads and provides authenticated tamper detection
+- Relay devices cannot read or modify transaction data
+
+---
+
+### 2. Duplicate Packet Handling
+
+Multiple bridge nodes may upload the same payment packet concurrently after internet restoration.
+
+To prevent duplicate transaction settlement:
+
+- SHA-256 ciphertext hashing is used as the idempotency key
+- Atomic duplicate detection is handled using `ConcurrentHashMap.putIfAbsent()`
+- Duplicate packets are rejected before settlement processing
+
+This ensures idempotent and duplicate-safe transaction handling during concurrent bridge uploads.
+
+---
+
+### 3. Replay Attack Prevention
+
+Replay protection is implemented using:
+
+- unique nonce generation for every transaction
+- timestamp freshness validation
+- backend expiry checks for stale packets
+
+This prevents attackers from replaying previously captured encrypted payment packets.
 
 ---
 
