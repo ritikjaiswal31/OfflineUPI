@@ -134,54 +134,139 @@ Settlement occurs only after internet connectivity becomes available.
 
 ## Screenshots
 
-### Application Dashboard
+### Initial Dashboard State
 
-![Dashboard](screenshots/dashboard.png)
+Shows:
+- account balances
+- mesh devices
+- empty transaction history
+- initial offline network state
 
-### Payment Packet Injection
-
-![Inject Payment](screenshots/inject-payment.png)
-
-### Gossip Propagation
-
-![Gossip Round](screenshots/gossip-round.png)
-
-### Bridge Upload & Settlement
-
-![Bridge Upload](screenshots/bridge-upload.png)
-
-### Successful Transaction Settlement
-
-![Settlement Success](screenshots/settlement-success.png)
-
-### Duplicate Prevention / Idempotency
-
-![Duplicate Prevention](screenshots/idempotency.png)
-
-### Postman API Testing
-
-![Postman Testing](screenshots/postman-testing.png)
+<img width="1950" height="1313" alt="Initial Dashboard" src="https://github.com/user-attachments/assets/3dc36c24-a374-464a-a5c7-c2d98319a911" />
 
 ---
 
-## API Testing Screenshots
+### Payment Packet Injection
 
-### Inject Payment Packet API
 
-![Inject API](screenshots/api-inject.png)
 
-### Gossip Protocol API
+![Payment Packet Injection](screenshots/dashboard-packet-injected.png)
 
-![Gossip API](screenshots/api-gossip.png)
+---
 
-### Bridge Upload API
+### Gossip Propagation
 
-![Bridge API](screenshots/api-bridge.png)
+Shows encrypted packet propagation across relay devices using gossip protocol.
 
-### Transaction History API
+![Gossip Propagation](screenshots/dashboard-gossip-propagation.png)
 
-![Transaction API](screenshots/api-transactions.png)
+---
 
-### Mesh State API
+### Bridge Upload & Settlement
 
-![Mesh State API](screenshots/api-mesh-state.png)
+Bridge node uploads packet after regaining internet connectivity and backend performs secure settlement.
+
+![Bridge Upload & Settlement](screenshots/dashboard-settlement-success.png)
+
+---
+
+### Successful Transaction Settlement
+
+Shows:
+- updated balances
+- successful transaction history
+- settlement confirmation
+
+![Settlement Success](screenshots/dashboard-settlement-success.png)
+
+---
+
+### Postman API Testing
+
+# API Testing Screenshots
+
+### Accounts
+
+Fetches current account balances.
+
+<img width="1919" height="1310" alt="image" src="https://github.com/user-attachments/assets/00a21cec-f633-466b-8557-d3e9d3bd8934" />
+
+---
+
+### Transactions
+
+Fetches transaction ledger and settlement history.
+
+<img width="1906" height="739" alt="image" src="https://github.com/user-attachments/assets/869959a6-9b49-4666-ac25-fbfd3231a289" />
+
+---
+
+### Mesh State
+
+Displays mesh topology, relay nodes and bridge node state.
+
+<img width="1911" height="1302" alt="image" src="https://github.com/user-attachments/assets/b96f1b86-b9d7-45af-941f-82d5986bb651" />
+
+---
+
+### Inject Payment Packet
+
+Creates encrypted payment packet for offline propagation.
+
+<img width="1909" height="897" alt="image" src="https://github.com/user-attachments/assets/e40db7e4-3c7d-4541-a379-43b4493dd210" />
+
+<img width="1950" height="1327" alt="image" src="https://github.com/user-attachments/assets/e03472f1-8de0-4f3c-8b58-1772f0c4b221" />
+
+---
+
+### Gossip Protocol — Round 1
+
+Demonstrates initial packet propagation through relay devices.
+
+<img width="1903" height="734" alt="image" src="https://github.com/user-attachments/assets/43760e4e-3fa5-40ad-b412-4613a8cb4fd4" />
+
+---
+
+### Gossip Protocol — Round 2
+
+Demonstrates duplicate-safe propagation and idempotent mesh behavior.
+
+<img width="1913" height="742" alt="image" src="https://github.com/user-attachments/assets/8f41742b-d25d-4d68-b0e7-5a98f705f965" />
+
+<img width="1902" height="784" alt="image" src="https://github.com/user-attachments/assets/d82ca519-7564-4e5e-9262-73a6ee409fff" />
+
+---
+
+### Bridge Upload
+
+Bridge node uploads encrypted packet to backend for settlement.
+
+<img width="1175" height="201" alt="image" src="https://github.com/user-attachments/assets/9782c709-f4e7-4b9e-b4a2-76a5f0762749" />
+
+---
+
+### Updated Account Balances
+
+Shows updated balances after successful settlement.
+
+<img width="745" height="486" alt="image" src="https://github.com/user-attachments/assets/b2363082-6c8e-4937-996d-69d1d508805c" />
+
+---
+
+### Transaction History
+
+Displays final settled transaction stored in ledger.
+
+<img width="1896" height="672" alt="image" src="https://github.com/user-attachments/assets/d680c58e-c2f5-4cc2-b924-f792a1f99cbd" />
+
+<img width="1900" height="874" alt="image" src="https://github.com/user-attachments/assets/c098bd57-e2c1-4f07-b621-aa4d6d68081a" />
+
+---
+
+### Duplicate Prevention / Idempotency
+
+Second bridge upload attempt safely ignored already-settled packets using idempotent transaction handling.
+
+<img width="1913" height="530" alt="image" src="https://github.com/user-attachments/assets/7060a5d3-876f-4da1-9c76-dd670ca69533" />
+
+```
