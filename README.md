@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-OfflineUPI is a distributed transaction processing system built using Spring Boot that demonstrates secure offline payment propagation through mesh-based communication, gossip protocol routing, and deferred settlement architecture.
+OfflineUPI is a distributed transaction processing system built using Spring Boot that demonstrates secure offline payment propagation through mesh-based communication, gossip protocol routing and deferred settlement architecture.
 
 ---
 
