@@ -22,12 +22,6 @@ OfflineUPI is a distributed transaction processing system built using Spring Boo
 
 ---
 
-## Architecture
-
-OfflineUPI uses a distributed mesh-routing architecture where encrypted payment packets propagate across nearby relay nodes through gossip-based communication until a bridge node restores internet connectivity and forwards the packet to the backend for secure transaction settlement.
-
----
-
 ## Tech Stack
 
 | Category | Technologies |
@@ -42,50 +36,13 @@ OfflineUPI uses a distributed mesh-routing architecture where encrypted payment 
 
 ---
 
-## Core Components
+## High-Level Design (HLD)
 
-| Component | Description |
-|-----------|-------------|
-| Mesh Simulator | Simulates offline mesh-based packet propagation |
-| Relay Nodes | Forward encrypted payment packets across the mesh network |
-| Bridge Node | Uploads packets to backend after internet restoration |
-| Settlement Service | Performs atomic debit-credit transaction settlement |
-| Hybrid Crypto Service | Handles RSA + AES-GCM encryption and decryption |
-| Idempotency Service | Prevents duplicate transaction settlement |
-| Dashboard UI | Visualizes mesh propagation and settlement flow |
+<img width="1534" height="498" alt="OfflineUPI HLD" src="https://github.com/user-attachments/assets/ef553108-9100-4278-9839-fac85fda4961" />
 
----
+## Low-Level Design (LLD)
 
-## Application Flow
-
-1. Sender creates an encrypted payment packet
-2. Packet propagates across nearby relay nodes using gossip-based mesh routing
-3. Bridge node regains internet connectivity
-4. Bridge uploads packet to backend
-5. Backend validates, decrypts and settles transaction
-
----
-
-## Working Flow
-
-```text
-phone-node-1
-   ↓
-phone-relay-1
-   ↓
-phone-relay-2
-   ↓
-phone-relay-3
-   ↓
-phone-bridge
-````
-
-1. Sender creates encrypted payment packet
-2. Relay devices forward encrypted packet
-3. Bridge uploads packet to backend
-4. Backend decrypts and settles transaction
-
----
+<img width="1534" height="521" alt="OfflineUPI LLD" src="https://github.com/user-attachments/assets/34e3e6d1-a3ce-4c6c-a1f0-22678c4ad911" />
 
 ## Security Features
 
@@ -158,11 +115,11 @@ This prevents attackers from replaying previously captured encrypted payment pac
 ```text
 Payment Request
       ↓
-Offline Packet Propagation
+Offline Mesh Propagation
       ↓
-Bridge Gets Internet
+Bridge Restores Internet Connectivity
       ↓
-Backend Settlement
+Backend Settlement Processing
 ```
 
 Settlement occurs only after internet connectivity becomes available.
