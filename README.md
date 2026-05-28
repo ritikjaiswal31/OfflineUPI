@@ -1,5 +1,5 @@
 # OfflineUPI 📶
-**Mesh-Based Secure Transaction Processing System**
+**Distributed Mesh Payment Propagation System**
 
 ---
 
