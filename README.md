@@ -1,15 +1,16 @@
-# OfflineUPI 📶
-**Distributed Mesh Payment Propagation System**
+## OfflineUPI 📶
+
+### Distributed Mesh Payment Propagation System
 
 ---
 
-## Project Overview
+### Project Overview
 
 OfflineUPI is a distributed transaction processing system built using Spring Boot that demonstrates secure offline payment propagation through mesh-based communication, gossip protocol routing and deferred settlement architecture.
 
 ---
 
-## Key Features
+### Key Features
 
 - Offline Mesh-Based Payment Propagation
 - Gossip Protocol Simulation
@@ -22,7 +23,7 @@ OfflineUPI is a distributed transaction processing system built using Spring Boo
 
 ---
 
-## Tech Stack
+### Tech Stack
 
 | Category | Technologies |
 |----------|-------------|
@@ -36,33 +37,33 @@ OfflineUPI is a distributed transaction processing system built using Spring Boo
 
 ---
 
-## High-Level Design (HLD)
+### High-Level Design (HLD)
 
 <img width="1534" height="498" alt="OfflineUPI HLD" src="https://github.com/user-attachments/assets/ef553108-9100-4278-9839-fac85fda4961" />
 
-## Low-Level Design (LLD)
+### Low-Level Design (LLD)
 
 <img width="1534" height="521" alt="OfflineUPI LLD" src="https://github.com/user-attachments/assets/34e3e6d1-a3ce-4c6c-a1f0-22678c4ad911" />
 
-## Security Features
+### Security Features
 
-### Hybrid Encryption
+#### Hybrid Encryption
 
 - RSA-OAEP is used to securely exchange encryption keys
 - AES-256-GCM encrypts payment payloads and provides tamper detection
 
-### Replay Protection
+#### Replay Protection
 
 - nonce generation
 - timestamp validation
 
-### Idempotency
+#### Idempotency
 
 - duplicate packet settlement prevention
 
-## Engineering Challenges & Solutions
+### Engineering Challenges & Solutions
 
-### 1. Untrusted Devices
+#### 1. Untrusted Devices
 
 OfflineUPI uses hybrid encryption with RSA-OAEP and AES-256-GCM to securely propagate encrypted payment packets across untrusted relay devices.
 
@@ -72,7 +73,7 @@ OfflineUPI uses hybrid encryption with RSA-OAEP and AES-256-GCM to securely prop
 
 ---
 
-### 2. Duplicate Packet Handling
+#### 2. Duplicate Packet Handling
 
 Multiple bridge nodes may upload the same payment packet concurrently after internet restoration.
 
@@ -86,7 +87,7 @@ This ensures idempotent and duplicate-safe transaction handling during concurren
 
 ---
 
-### 3. Replay Attack Prevention
+#### 3. Replay Attack Prevention
 
 Replay protection is implemented using:
 
@@ -98,7 +99,7 @@ This prevents attackers from replaying previously captured encrypted payment pac
 
 ---
 
-## Distributed Systems Concepts
+### Distributed Systems Concepts
 
 * Mesh Networking
 * Gossip Protocol
@@ -110,7 +111,7 @@ This prevents attackers from replaying previously captured encrypted payment pac
 
 ---
 
-## Deferred Settlement
+### Deferred Settlement
 
 ```text
 Payment Request
