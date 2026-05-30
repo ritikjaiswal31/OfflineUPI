@@ -52,7 +52,7 @@ OfflineUPI is a distributed transaction processing system built using Spring Boo
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bd159c69-c33a-43f9-9cd1-f412d0608ffa"
        alt="OfflineUPI LLD"
-       width="400"/>
+       width="450"/>
 </p>
 
 ---
