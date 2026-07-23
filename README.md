@@ -233,7 +233,7 @@ Displays final settled transaction stored in ledger.
 
 ### Duplicate Prevention / Idempotency
 
-Second bridge upload attempt safely ignored already-settled packets using idempotent transaction handling.
+Second bridge synchronization finds no pending transactions because previously uploaded packets are already marked as settled, preventing duplicate processing through idempotent transaction handling.
 
 <img width="1913" height="530" alt="image" src="https://github.com/user-attachments/assets/7060a5d3-876f-4da1-9c76-dd670ca69533" />
 
