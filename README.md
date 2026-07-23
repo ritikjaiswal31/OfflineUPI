@@ -37,26 +37,6 @@ OfflineUPI is a distributed transaction processing system built using Spring Boo
 
 ---
 
-### High-Level Design (HLD)
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/afc23771-eda8-4c44-81f9-b1043ea48da0"
-       alt="OfflineUPI HLD"
-       width="400"/>
-</p>
-
----
-
-### Low-Level Design (LLD)
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/bd159c69-c33a-43f9-9cd1-f412d0608ffa"
-       alt="OfflineUPI LLD"
-       width="450"/>
-</p>
-
----
-
 ### Security Features
 
 #### Hybrid Encryption
